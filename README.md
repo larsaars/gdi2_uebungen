@@ -1,2 +1,1 @@
-# gdi2_uebungen
-Übungen aus GDI 2
+# Übungen aus GDI 2
