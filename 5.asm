@@ -54,7 +54,7 @@
     ; loop label to jump to
     %4:
         ; move to current array address the value of edx
-        mov dword [%1 + ecx * 4], edx
+        mov dword [%1 + ecx * 4 - 4], edx
         ; decrease edx every looping
         dec edx
     loop %4
@@ -80,7 +80,8 @@ CMAIN:
     ; pos_nums from 1 to 10 (incl)
     FILL_ARRAY pos_nums, 10, 10, Pos_fill
     ; and neg_nums from -1 to 8 (incl)
-    FILL_ARRAY neg_nums, 10, 8, Neg_fill  
+    FILL_ARRAY neg_nums, 10, 8, Neg_fill
+    
     
     ; call the print array macro with
     ; the address, the length of the array and the label name for the loop
