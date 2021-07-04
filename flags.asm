@@ -1,8 +1,6 @@
 %include "io.inc"
 
 section .data
-Hallo DD "Hallo"
-
 A DD 12h
 B DD 1h
 ERG DD 0h
@@ -10,7 +8,9 @@ ERG DD 0h
 section .text
 global CMAIN
 CMAIN:
-    mov ebp, esp ; for correct debugging
+    mov ebp, esp; for correct debugging
+    ;write your code here
+    xor eax, eax
     
     xor eax, eax
     MOV EAX, [A]
@@ -20,11 +20,7 @@ CMAIN:
     add eax, [B]
     mov [ERG], eax
     
-    PRINT_HEX 4, [ERG]
-    NEWLINE
-    PRINT_STRING Hallo
-    NEWLINE
-    PRINT_DEC 4, EAX
+    pushf
+    pop eax
     
-    xor eax, eax
     ret
