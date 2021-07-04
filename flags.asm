@@ -20,7 +20,8 @@ CMAIN:
     add eax, [B]
     mov [ERG], eax
     
-    pushf
-    pop eax
+    mov eax, 10001011b
+    push eax
+    popf
     
     ret
