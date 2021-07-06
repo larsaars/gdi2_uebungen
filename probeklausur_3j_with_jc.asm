@@ -16,13 +16,12 @@ CMAIN:
     
     jc CarryFlagSet
     
+    PRINT_STRING "carry flag not set"
+    
     xor eax, eax
     ret
     
-    CarryFlagSet:
-        PRINT_STRING "carry flag set"
-        xor eax, eax
-        ret
-    
+CarryFlagSet:
+    PRINT_STRING "carry flag set"
     xor eax, eax
     ret
