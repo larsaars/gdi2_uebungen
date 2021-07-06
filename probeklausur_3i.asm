@@ -8,7 +8,6 @@ section .text
 global CMAIN
 CMAIN:
     mov ebp, esp; for correct debugging
-    ;write your code here
     push Zahl
     push String
     
