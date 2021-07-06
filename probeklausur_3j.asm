@@ -7,8 +7,8 @@ Zahl2 DD 0xFFF
 section .text
 
 CarryFlagSet:
-        PRINT_STRING "carry flag is set"
-        ret
+    PRINT_STRING "carry flag is set"
+    ret
     
 CarryFlatNotSet:
     PRINT_STRING "carry flag is not set"
