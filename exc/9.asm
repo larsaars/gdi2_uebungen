@@ -82,8 +82,7 @@ CMAIN:
         ; move result to variable
         mov dword [RES], eax
         mov dword [RES+4], edx
-    
-        ; clear the counter reg
+        
         xor ecx, ecx
         
         Horner:   
@@ -97,10 +96,10 @@ CMAIN:
             push edx    
             inc ecx    
             mov ebx,[RES]    
-            cmp ebx,0    
+            cmp ebx, 0
         jnz Horner    
             mov ebx,[RES+4]    
-            cmp ebx,0    
+            cmp ebx, 0
         jnz Horner   
             
         Print_Stack:   

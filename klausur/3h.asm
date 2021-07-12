@@ -21,6 +21,6 @@ CMAIN:
         NEWLINE
         
         ; macro NEWLINE is too big for short jump -> jnz for long jump -> zero division flag has to be set
-        add ecx, 0
+        cmp ecx, 0
     jnz Schleife
     ret
